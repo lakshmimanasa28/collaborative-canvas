@@ -2,7 +2,11 @@
 
 Vanilla JS + HTML5 Canvas frontend with Express + Socket.io backend. Multiple users draw together in real-time with global undo/redo.
 
+**🚀 Fully deployable on Vercel** - Frontend and backend combined in a single deployment.
+
 ## Quick Start
+
+### Local Development
 
 ```bash
 npm install
@@ -10,6 +14,21 @@ npm start
 ```
 
 Open `http://localhost:3000` in multiple tabs to test multi-user collaboration.
+
+### Deploy to Vercel
+
+```bash
+# Install Vercel CLI (if not already installed)
+npm i -g vercel
+
+# Deploy
+vercel
+
+# Or deploy to production
+vercel --prod
+```
+
+The project is configured for Vercel deployment with a custom server that handles Socket.IO WebSocket connections.
 
 ### Rooms (optional)
 Use the `room` query param for isolated canvases:

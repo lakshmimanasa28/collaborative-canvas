@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collaborative Canvas</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="toolbar">
+    <div class="left">
+      <button id="tool-brush" class="tool active" title="Brush">🖌️</button>
+      <button id="tool-eraser" class="tool" title="Eraser">🧽</button>
+      <input id="color" type="color" value="#1e1e1e" title="Color" />
+      <input id="width" type="range" min="1" max="40" value="4" title="Width" />
+      <input id="opacity" type="range" min="0" max="1" value="1" step="0.05" title="Opacity" />
+      <button id="undo" title="Undo">↶</button>
+      <button id="redo" title="Redo">↷</button>
+    </div>
+    <div class="right">
+      <span id="room-label"></span>
+      <span id="user-label"></span>
+    </div>
+  </header>
+
+  <main>
+    <canvas id="canvas"></canvas>
+  </main>
+
+  <div id="cursors"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="./main.js"></script>
+  <noscript>Please enable JavaScript to use the collaborative canvas.</noscript>
+  
+</body>
+</html>
+
